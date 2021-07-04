@@ -20,7 +20,17 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/ngsanogo/AFDapp/branch/main/graph/badge.svg)](https://codecov.io/gh/ngsanogo/AFDapp?branch=main)
 <!-- badges: end -->
 
-The goal of AFDapp is to use AFD open data.
+The goal of AFDapp is to use AFD open data to make a shiny app.  
+This project shows that I have a good level in R.  
+In this project I've used **Golem** to create a production ready project.  
+I've also used :
+
+  - **dplyr** for data manipulation
+  - **reactable** to display beautiful and interactive table
+  - **highcharter** and **echarts4r** to display awesome plot
+  - **leaflet** to display map
+  - and **shinymanager** to manage the access to the app
+
 
 ## Installation
 
@@ -30,6 +40,17 @@ You can install the development version from [GitHub](https://github.com/) with:
 # install.packages("devtools")
 devtools::install_github("ngsanogo/AFDapp")
 ```
+
+## usage
+
+Once the package is installed, you can launch it with:
+
+``` r
+# install.packages("devtools")
+AFDapp::run_app()
+```
+
+
 ## Code of Conduct
 
 Please note that the AFDapp project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
