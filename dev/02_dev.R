@@ -17,11 +17,14 @@
 ## Add one line by package you want to add as dependency
 usethis::use_package( "rlang" )
 usethis::use_package( "reactable" )
+usethis::use_package( "echarts4r" )
+usethis::use_package( "leaflet" )
 
 ## Add modules ----
 ## Create a module infrastructure in R/
 golem::add_module( name = "figure" ) # Name of the module
 golem::add_module( name = "chart" ) # Name of the module
+golem::add_module( name = "map" ) # Name of the module
 
 ## Add helper functions ----
 ## Pipe 

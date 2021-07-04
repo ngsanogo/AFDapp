@@ -7,7 +7,9 @@ License: MIT + file LICENSE
 Imports: 
     config (>= 0.3.1),
     dplyr,
+    echarts4r,
     golem (>= 0.3.1),
+    leaflet,
     magrittr,
     processx,
     reactable,

@@ -18,7 +18,13 @@ app_ui <- function(request) {
                ),
                
                tabPanel(
-                 title = "About"
+                 title = "Map",
+                 mod_map_ui("map_ui_1")
+               ),
+               
+               tabPanel(
+                 title = "About",
+                 includeMarkdown("inst/app/www/about.md")
                )
     )
   )
