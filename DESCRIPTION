@@ -12,6 +12,7 @@ Imports:
     highcharter,
     leaflet,
     magrittr,
+    pkgload,
     processx,
     reactable,
     rlang,
