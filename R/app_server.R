@@ -6,5 +6,6 @@
 #' @noRd
 app_server <- function( input, output, session ) {
   # Your application server logic 
-  
+  mod_figure_server("figure_ui_1"),
+  mod_chart_server("chart_ui_1")
 }

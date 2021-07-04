@@ -9,8 +9,17 @@ app_ui <- function(request) {
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic 
-    fluidPage(
-      h1("AFDapp")
+    navbarPage(title = NULL,
+               
+               tabPanel(
+                 title = "Accueil",
+                 mod_figure_ui("figure_ui_1"),
+                 mod_chart_ui("chart_ui_1")
+               ),
+               
+               tabPanel(
+                 title = "About"
+               )
     )
   )
 }
@@ -28,7 +37,7 @@ golem_add_external_resources <- function(){
   add_resource_path(
     'www', app_sys('app/www')
   )
- 
+  
   tags$head(
     favicon(),
     bundle_resources(

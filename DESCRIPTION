@@ -1,13 +1,17 @@
 Package: AFDapp
 Title: A shiny app for AFD data
 Version: 0.0.0.9000
-Authors@R: person('N'Gouro dit Issa', 'Sanogo', email = 'ngsanogo@gmail.com', role = c('cre', 'aut'))
+Authors@R: person("N'Gouro dit Issa", "Sanogo", email = "ngsanogo@gmail.com", role = c("cre", "aut"))
 Description: A shiny app for AFD data.
 License: MIT + file LICENSE
 Imports: 
     config (>= 0.3.1),
+    dplyr,
     golem (>= 0.3.1),
+    magrittr,
     processx,
+    reactable,
+    rlang,
     shiny (>= 1.6.0)
 Encoding: UTF-8
 LazyData: true
@@ -15,7 +19,13 @@ RoxygenNote: 7.1.1
 URL: https://github.com/ngsanogo/AFDapp
 BugReports: https://github.com/ngsanogo/AFDapp/issues
 Suggests: 
+    rmarkdown,
+    knitr,
     spelling,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    covr
 Config/testthat/edition: 3
 Language: en-US
+VignetteBuilder: knitr
+Depends: 
+    R (>= 2.10)
