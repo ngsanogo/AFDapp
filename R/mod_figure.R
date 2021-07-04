@@ -27,7 +27,7 @@ mod_figure_server <- function(id){
         dplyr::summarise(
           pays_distinct = length(unique(pays_de_realisation)),
           projet_total = length(unique(id_projet)),
-          projet_acheve = sum(etat_du_projet %in% "Achevé"),
+          projet_acheve = sum(etat_du_projet %in% "Achev\u00e9"),
           engagement_brut = sum(engagements_bruts_euro, na.rm = TRUE),
           versement = sum(versements_euro, na.rm = TRUE)
         ) %>% 
@@ -42,7 +42,7 @@ mod_figure_server <- function(id){
             region = reactable::colDef(name = "Region"),
             pays_distinct = reactable::colDef(name = "Nombre de pays"),
             projet_total = reactable::colDef(name = "Nombre projet total"),
-            projet_acheve = reactable::colDef(name  = "Nombre de projet achevé"),
+            projet_acheve = reactable::colDef(name  = "Nombre de projet achev\u00e9"),
             engagement_brut = reactable::colDef(
               name  = "Engagement brut",
               format = reactable::colFormat(currency = "EUR")

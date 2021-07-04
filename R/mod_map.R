@@ -10,7 +10,7 @@
 mod_map_ui <- function(id){
   ns <- NS(id)
   tagList(
-    h2("Projets en cours d'exécution depuis 2018"),
+    h2("Projets en cours d'ex\u00e9cution depuis 2018"),
     leaflet::leafletOutput(ns("map"))
   )
 }
@@ -34,7 +34,7 @@ mod_map_server <- function(id){
           year = as.numeric(substr(date_d_octroi, 1, 4))
         ) %>%
         dplyr::filter(
-          etat_du_projet %in% "Exécution" &
+          etat_du_projet %in% "Ex\u00e9cution" &
                  year %in% 2018
           ) %>% 
         leaflet::leaflet() %>% 

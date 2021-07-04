@@ -16,9 +16,11 @@
 ## Dependencies ----
 ## Add one line by package you want to add as dependency
 usethis::use_package( "rlang" )
+usethis::use_package( "highcharter" )
 usethis::use_package( "reactable" )
 usethis::use_package( "echarts4r" )
 usethis::use_package( "leaflet" )
+usethis::use_package( "shinymanager" )
 
 ## Add modules ----
 ## Create a module infrastructure in R/
@@ -33,6 +35,13 @@ usethis::use_pipe()
 golem::add_fct( "helpers" ) 
 golem::add_utils( "helpers" )
 
+
+## Add functions ----
+usethis::use_r("zzz")
+## Add doc data
+usethis::use_r("dataset")
+usethis::use_r("credentials")
+
 ## External resources
 ## Creates .js and .css files at inst/app/www
 golem::add_js_file( "script" )
@@ -41,7 +50,8 @@ golem::add_css_file( "custom" )
 
 ## Add internal datasets ----
 ## If you have data in your package
-usethis::use_data_raw( name = "dataset", open = FALSE ) 
+usethis::use_data_raw( name = "dataset", open = FALSE )
+usethis::use_data_raw( name = "credentials", open = FALSE ) 
 
 ## Tests ----
 ## Add one line by test you want to create

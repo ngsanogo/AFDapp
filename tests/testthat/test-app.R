@@ -1,3 +1,3 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+test_that("Etat projet", {
+  expect_equal(unique(dataset$etat_du_projet), c("Achev\u00e9", "Ex\u00e9cution"))
 })

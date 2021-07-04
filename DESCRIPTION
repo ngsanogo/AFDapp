@@ -9,12 +9,14 @@ Imports:
     dplyr,
     echarts4r,
     golem (>= 0.3.1),
+    highcharter,
     leaflet,
     magrittr,
     processx,
     reactable,
     rlang,
-    shiny (>= 1.6.0)
+    shiny (>= 1.6.0),
+    shinymanager
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1

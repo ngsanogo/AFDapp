@@ -22,20 +22,20 @@ mod_chart_ui <- function(id){
 mod_chart_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
-    # Pie chart : nombre de projet par région
+    # Pie chart : nombre de projet par r\u00e9gion
     output$plot1 <- echarts4r::renderEcharts4r({
       dataset %>%
         dplyr::group_by(region) %>% 
         dplyr::summarise(
           projet_total = length(unique(id_projet)),
-          `Projet achevé` = sum(etat_du_projet %in% "Achevé"),
-          `Projet en exécution` = sum(etat_du_projet %in% "Exécution")
+          projet_acheve = sum(etat_du_projet %in% "Achev\u00e9"),
+          projet_execution = sum(etat_du_projet %in% "Ex\u00e9cution")
         ) %>% 
         echarts4r::e_charts(region)  %>%  
-        echarts4r::e_bar(`Projet achevé`, dodge = "grp") %>%
-        echarts4r::e_bar(`Projet en exécution` , dodge = "grp") %>%
+        echarts4r::e_bar(projet_acheve, dodge = "grp", name = "Projet achev\u00e9") %>%
+        echarts4r::e_bar(projet_execution , dodge = "grp", name = "Projet ex\u00e9cution") %>%
         echarts4r::e_labels() %>% 
-        echarts4r::e_title("Nombre de projet par région") %>%
+        echarts4r::e_title("Nombre de projet par r\u00e9gion") %>%
         echarts4r::e_legend()
     })
     output$plot2 <- highcharter::renderHighchart({
